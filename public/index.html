@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mammomat Web</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+      </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Mammomat UI</h1>
+    <div class="all">
+        <div class="f">
+            <div class="input">
+                <input type="text" id="n" placeholder="Namn">
+                <input type="text" id="msg" placeholder="Meddelande">
+            </div>
+            <button onclick="send()">Send</button>
+        </div>
+    </div>
+   
+    <script>
+        const nameIn  = document.querySelector("#n");
+        const msgIn  = document.querySelector("#msg");
+
+        async function send(){
+            if (msgIn.value == "" || nameIn.value == "") {
+                return;
+            }
+            fetch("/addmessage?author=" + nameIn.value + "&msg=" +msgIn.value);
+            nameIn.value = "";
+            msgIn.value = "";
+            alert("Skickat!")
+        }
+    </script>
+</body>
+</html>

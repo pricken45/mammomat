@@ -1,0 +1,64 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+.all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+* {
+  font-family: "Righteous", cursive;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+}
+
+.f {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  justify-content: center;
+}
+
+input {
+  height: 10mm;
+  border: none;
+  background-color: rgb(211, 211, 211);
+  border-radius: 10px;
+  margin: 2mm;
+  text-align: center;
+  transition: background-color 100ms;
+}
+
+input:focus {
+  outline: none;
+}
+
+input:hover {
+  background-color: rgb(177, 177, 177);
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: rgb(153, 153, 153);
+}
+
+button {
+  border: none;
+  transition: background-color 200ms;
+
+  margin-top: 2mm;
+  margin-bottom: 2mm;
+  width: 25mm;
+  border-radius: 10px;
+}
